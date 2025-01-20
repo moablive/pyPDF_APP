@@ -21,7 +21,7 @@ class PDFCombinerWindow(QMainWindow):
         
         # Defina o ícone da janela (barra de título).
         # Supondo que o ícone esteja na mesma pasta e se chame "icone.png".
-        self.setWindowIcon(QIcon("./pdf.ico"))
+        self.setWindowIcon(QIcon("D:\!Developer\pyPDF_APP\pdf.ico"))
 
         self.setGeometry(300, 300, 600, 400)
         
