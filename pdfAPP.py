@@ -19,8 +19,7 @@ class PDFCombinerWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Organizador de PDFs")
         
-        # Defina o ícone da janela (barra de título).
-        # Supondo que o ícone esteja na mesma pasta e se chame "icone.png".
+        # Defina o ícone 
         self.setWindowIcon(QIcon("D:\!Developer\pyPDF_APP\pdf.ico"))
 
         self.setGeometry(300, 300, 600, 400)
