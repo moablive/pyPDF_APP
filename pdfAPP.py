@@ -113,12 +113,11 @@ class PDFCombinerWindow(QMainWindow):
                 "Erro ao ler PDF",
                 f"Não foi possível abrir {pdf_path}.\n\n{str(e)}"
             )
-    
+
     def remove_selected(self):
         """Remove os itens selecionados da lista."""
         for item in self.pdf_list.selectedItems():
             self.pdf_list.takeItem(self.pdf_list.row(item))
-    
     def move_up(self):
         """Move o item selecionado para cima na lista."""
         current_row = self.pdf_list.currentRow()
@@ -126,15 +125,13 @@ class PDFCombinerWindow(QMainWindow):
             item = self.pdf_list.takeItem(current_row)
             self.pdf_list.insertItem(current_row - 1, item)
             self.pdf_list.setCurrentRow(current_row - 1)
-
     def move_down(self):
         """Move o item selecionado para baixo na lista."""
         current_row = self.pdf_list.currentRow()
         if current_row < self.pdf_list.count() - 1 and current_row != -1:
             item = self.pdf_list.takeItem(current_row)
             self.pdf_list.insertItem(current_row + 1, item)
-            self.pdf_list.setCurrentRow(current_row + 1)
-    
+            self.pdf_list.setCurrentRow(current_row + 1)    
     def combine_pdfs(self):
         """Combina, na ordem, cada página listada no QListWidget."""
         if self.pdf_list.count() == 0:
